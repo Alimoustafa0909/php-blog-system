@@ -11,18 +11,18 @@ $query->execute([$id]);
 $post = $query->fetch(PDO::FETCH_ASSOC);
 
 if (!$post) {
-    die("Post not found.");
+    die("Post not found. <a href='index.php'>Back to home </a>");
 }
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title><?= htmlspecialchars($post['title']); ?></title>
+    <title><?php echo $post['title']; ?></title>
 </head>
 <body>
-<h1><?= htmlspecialchars($post['title']); ?></h1>
-<p><?= nl2br(htmlspecialchars($post['content'])); ?></p>
+<h1><?php echo $post['title']; ?></h1>
+<p><?php echo ($post['content']); ?></p>
 <a href="index.php">Back to Home</a>
 </body>
 </html>

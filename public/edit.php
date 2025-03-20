@@ -3,7 +3,7 @@ session_start();
 require '../config/database.php';
 
 if (!isset($_SESSION['admin'])) {
-    header("Location: login.php");  // Redirect to login if not an admin
+    header("Location: login.php");
     exit;
 }
 
@@ -38,8 +38,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
 <h1>Edit Post</h1>
 <form method="POST">
-    <input type="text" name="title" value="<?= htmlspecialchars($post['title']); ?>" required><br>
-    <textarea name="content" required><?= htmlspecialchars($post['content']); ?></textarea><br>
+    <input type="text" name="title" value="<?php echo($post['title']); ?>" required><br>
+    <textarea name="content" required><?php echo ($post['content']); ?></textarea><br>
     <button type="submit">Update</button>
 </form>
 </body>

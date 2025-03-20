@@ -1,5 +1,6 @@
 <?php
 
+//for the admin privilege
 session_start();
 require '../config/database.php';
 
@@ -19,25 +20,23 @@ $posts = $query->fetchAll(PDO::FETCH_ASSOC);
 <ul>
     <?php foreach ($posts as $post): ?>
         <li>
-            <a href="show.php?id=<?= $post['id']; ?>"><?php echo $post['title'] ?></a>
-            <!--the admin privileges here in the session  -->
-            <?php if (isset($_SESSION['admin'])): ?>
-                <a href="edit.php?id=<?= $post['id']; ?>"> Edit </a>
-                <a href="delete.php?id=<?= $post['id'] ?>"> Delete</a>
 
+            <a href="show.php?id=<?= $post['id']; ?>" style="margin-right: 20px;"><?php echo $post['title'] ?></a>
+
+            <?php if (isset($_SESSION['admin'])): ?>
+                <a href="edit.php?id=<?= $post['id']; ?>" style="margin-left: 10px;">Edit</a>
+                <a href="delete.php?id=<?= $post['id']; ?>" style="margin-left: 10px;">Delete</a>
             <?php endif ?>
         </li>
-
-
     <?php endforeach; ?>
 </ul>
 
 <?php if (!isset($_SESSION['admin'])): ?>
-    <p><a href="login.php">Login as Admin</a></p>
+    <p><a href="../auth/login.php">Login as Admin</a></p>
 <?php endif; ?>
 
 <?php if (isset($_SESSION['admin'])): ?>
-    <a href="logout.php">Logout</a>
+    <a href="../auth/logout.php">Logout</a>
 <?php endif; ?>
 </body>
 </html>

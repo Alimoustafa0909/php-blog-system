@@ -5,10 +5,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    // Check against hardcoded credentials
+
     if ($username == "admin" && $password == "admin123") {
-        $_SESSION['admin'] = true;  // Set the session variable
-        header("Location: index.php"); // Redirect to the blog page
+        $_SESSION['admin'] = true;
+        header("Location: index.php");
         exit;
     } else {
         $error = "Invalid username or password.";
