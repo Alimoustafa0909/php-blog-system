@@ -5,3 +5,6 @@
 3. Import the DB in your phpmyadmin (blogdb.sql)
 4. Access the project with your browser:
    `http://localhost/php-blog-system`
+5.Admin Credintials 
+username: admin 
+password: admin123
