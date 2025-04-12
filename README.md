@@ -6,5 +6,5 @@
 4. Access the project with your browser: `http://localhost/php-blog-system`  
 5. Admin Credentials: username: admin, password: admin123  
 6. The project implements "CRUD" operations (Create, Read, Update, Delete) for managing blog posts.  
-7. "Session" is used to grant "admin privileges" for editing and deleting posts.  
+  7. "Session" is used to have "admin privileges" for editing and deleting posts.  
 Video Link: [Google Drive](https://drive.google.com/file/d/188jXU-opulD-ofNLnpLtR4KbUM5oihC4/view?usp=sharing)
