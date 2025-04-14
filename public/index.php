@@ -1,6 +1,6 @@
 <?php
 
-//for the admin privilege
+//for the admin privilege for the edit and delete button we put an session for the admin !!
 session_start();
 require '../config/database.php';
 

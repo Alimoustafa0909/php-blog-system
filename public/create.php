@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <h1>Create a New Post</h1>
 <form method="POST">
     <input type="text" name="title" placeholder="Title" required>
-    <textarea name="content" placeholder="Content" required></textarea>
+    <input name="content" placeholder="Content" required></input>
     <button type="submit">Submit</button>
 </form>
 </body>
